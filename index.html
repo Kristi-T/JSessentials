@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>JS essentials</title>
+</head>
+<body>
+<div class="section">
+
+<h1>JS essentials</h1>
+<p>Hello!</p>
+<p>My name is Kristina and I'm starting my JS journej.</p>
+    <h2 class="toggle-btn">Section 1</h2>
+    <div class="content">
+      <p>This is the Section 1. Here is list of some next features that was implemented:</p>
+			<ul>
+			<li>using &lt;canvas&gt;</li>
+			<li>using some simple JS functions</li>
+			<li>changing canvas color via buttons</li>
+			<li>adding text to the &lt;canvas&gt;</li>
+			<li>color selector for &lt;canvas&gt; via input type="color"</li>
+			<li>drawing a square using the input type="range"</li>
+			</ul>
+			<canvas id="canvasFirst"></canvas>
+	<p>
+	<input type="button" value="Make lime" onclick="doLime()">
+	<input type="button" value="Make yellow" onclick="doYellow()">
+	<input type="button" value="Add green rectangles" onclick="addGreenRect()">
+	<input type="button" value="add text" onclick="addText()">
+	</p>
+	<input type="color" id="color" value="#001A57" onchange="doColor()">
+	<input type="range" min="10" max="100" value="10" id="slider" oninput="doSquare()">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="toggle-btn">Section 2</h2>
+    <div class="content">
+      <p>This is the content of Section 2.</p>
+    </div>
+  </div>
+
+	<!-- <h1>Kristina</h1>
+	<canvas id="canvasFirst"></canvas>
+	<p>
+	<input type="button" value="make Lime" onclick="dolime()">
+	<input type="button" value="make Yellow" onclick="doyellow()">
+	</p>
+	<input type="text">
+	<input type="color" id="color" value="#001A57" onchange="docolor()">
+	<input type="range" min="10" max="100" value="10" id="slider" oninput="dosquare()"> -->
+	<script src="script.js"></script>
+</body>
+</html>
