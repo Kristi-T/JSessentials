@@ -1,51 +1,104 @@
 /* Palette https://colorhunt.co/palette/f9efdbebd9b49dbc98638889  */
 
+/* Main */
 
-canvas{
-	width: 450px;
-	height: 300px;
-	border: 2px dotted salmon;
-	}
-	
+canvas {
+  width: 450px;
+  height: 300px;
+  border: 2px dotted salmon;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(249,190,246,1) 35%, rgba(177,0,255,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(249, 190, 246, 1) 35%,
+    rgba(177, 0, 255, 1) 100%
+  );
   color: #333;
+  padding-top: 65px;
 }
-
-.section {
-  margin-bottom: 15px;
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
 
 h1 {
-      color: #638889;
-    }
+  text-align: center;
+}
 
 h2 {
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-cursor: pointer;
-transition: font-size 0.3s ease;
+  color: #638889;
+  transition: font-size 0.3s ease;
 }
 
 h2:hover {
   font-size: 30px; /* Increase the font size on hover */
   transition: font-size 0.3s ease; /* Add a smooth transition effect */
+  cursor: pointer;
+}
+
+h3 {
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+
+h3:hover {
+  font-size: 30px; /* Increase the font size on hover */
+  transition: font-size 0.3s ease; /* Add a smooth transition effect */
 }
 
 p {
-      font-size: 1.2em; /* Set the base font size */
-      line-height: 1.5;
-      color: #555;
-      margin-bottom: 15px;
-    }
+  font-size: 1.2em; /* Set the base font size */
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* @media screen and (min-width: $bp-desktop) {
+					padding-top: 32px;
+			} */
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content {
+  margin-top: 15px;
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #b9f0fbae;
+}
+
+/* Buttons */
 
 .toggle-btn {
   background-color: #f4f4f4;
@@ -53,39 +106,87 @@ p {
   cursor: pointer;
 }
 
-.content {
-margin-top: 15px;
-  display: none;
-  padding: 10px;
-  border: 1px solid #ddd;
-  background-color: #9DBC98;
+/* General button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
+/* Primary button style */
+.primary-button {
+  background-color: #001a57; /* Dark blue */
+  color: #fff; /* White text */
+}
+
+/* Secondary button style */
+.secondary-button {
+  background-color: #638889; /* Light teal */
+  color: #fff; /* White text */
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #444; /* Darker background color on hover */
+}
+
+/* Lists */
+
 ul {
-      list-style-type: circle;
-      padding-left: 16px;
-    }
+  list-style-type: none;
+  padding: 0;
+}
 
-    li {
-      margin-bottom: 8px;
-    }
+li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
 
-    input[type="button"] {
-      background-color: #001A57;
-      color: #638889;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
+li:before {
+  content: "\2022"; /* Unicode character for a bullet point */
+  color: #638889; /* Light teal */
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
 
-    input[type="color"] {
-      margin-right: 10px;
-    }
+/* Adjusted styles for the list items */
+li {
+  color: #555; /* Dark gray */
+}
 
-    input[type="range"] {
-      margin-top: 10px;
-    }
+/* Additional styling for the list items on hover */
+li:hover {
+  color: #001a57; /* Dark blue */
+}
 
+/* Input */
 
+input[type="button"] {
+  background-color: #001a57;
+  color: #638889;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="color"] {
+  margin-right: 10px;
+}
+
+input[type="range"] {
+  margin-top: 10px;
+}

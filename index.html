@@ -1,48 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-	<title>JS essentials</title>
-</head>
-<body>
-<div class="section">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>My way to JS</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>My way to JS</h1>
+        <!-- <div class="header__container">
+          <nav class="header__nav">
+            <a href="#">
+              <img
+                src="./images/logo.svg"
+                alt="Logo of Cassiopea's Modern Bakery"
+              />
+            </a>
+          </nav>
+        </div> -->
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <p>Hello!</p>
+          <p>My name is Kristina and I'm starting my JS journej.</p>
+          <p>Click on the section's name to see more.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <!-- <h2>JS essentials</h2> -->
 
-<h1>JS essentials</h1>
-<p>Hello!</p>
-<p>My name is Kristina and I'm starting my JS journej.</p>
-    <h2 class="toggle-btn">Section 1</h2>
-    <div class="content" id="content-div-1">
-      <p>This is the Section 1. Here is list of some next features that was implemented:</p>
-			<ul>
-			<li>using &lt;canvas&gt;</li>
-			<li>using some simple JS functions</li>
-			<li>changing canvas color via buttons</li>
-			<li>adding text to the &lt;canvas&gt;</li>
-			<li>color selector for &lt;canvas&gt; via input type="color"</li>
-			<li>drawing a square using the input type="range"</li>
-			</ul>
-			<canvas id="canvasFirst"></canvas>
-	<p>
-	<input type="button" value="Make lime" onclick="doLime()">
-	<input type="button" value="Make yellow" onclick="doYellow()">
-	<input type="button" value="Add green rectangles" onclick="addGreenRect()">
-	<input type="button" value="add text" onclick="addText()">
-	</p>
-	<input type="color" id="color" value="#001A57" onchange="doColor()">
-	<input type="range" min="10" max="100" value="10" id="slider" oninput="doSquare()">
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="toggle-btn">Section 2</h2>
-    <div class="content" id="content-div-2">
-      <p>This is the content of Section 2.</p>
-    </div>
-  </div>
-
-	<!-- <h1>Kristina</h1>
+          <h3 class="toggle-btn">Section 1</h3>
+          <div class="content" id="content-div-1">
+            <p>
+              This is the Section 1. Here is list of some next features that was
+              implemented:
+            </p>
+            <ul>
+              <li>using &lt;canvas&gt;</li>
+              <li>using some simple JS functions</li>
+              <li>changing canvas color via buttons</li>
+              <li>adding text to the &lt;canvas&gt;</li>
+              <li>color selector for &lt;canvas&gt; via input type="color"</li>
+              <li>drawing a square using the input type="range"</li>
+            </ul>
+            <canvas id="canvasFirst"></canvas>
+            <p>
+              <input
+                type="button"
+                class="button primary-button"
+                value="Make lime"
+                onclick="doLime()" />
+              <input
+                type="button"
+                class="button primary-button"
+                value="Make yellow"
+                onclick="doYellow()" />
+              <input
+                type="button"
+                class="button primary-button"
+                value="Add green rectangles"
+                onclick="addGreenRect()" />
+              <input
+                type="button"
+                class="button primary-button"
+                value="Add text"
+                onclick="addText()" />
+            </p>
+            <input
+              type="color"
+              id="color"
+              value="#001A57"
+              onchange="doColor()" />
+            <input
+              type="range"
+              min="10"
+              max="100"
+              value="10"
+              id="slider"
+              oninput="doSquare()" />
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="toggle-btn">Section 2</h3>
+          <div class="content" id="content-div-2">
+            <p>This is section with alerts on button click.</p>
+            <div class="div1" id="div1">
+              <p>
+                Here is alert message that is specified in the
+                <i>"onclick"</i> attribute of the button.
+              </p>
+              <input
+                type="button"
+                class="button secondary-button"
+                value="Button 1"
+                onclick="alert('Alert message on click.')" />
+            </div>
+            <div class="div2" id="div2">
+              <p>Here is alert message that is called by JS function.</p>
+              <input
+                type="button"
+                id="alertButton"
+                class="button secondary-button"
+                value="Button 2"
+                onclick="alertFunction()" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="toggle-btn">Section 3</h3>
+          <div class="content" id="content-div-3"><p>Here will be Section with some content.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptate, excepturi eum adipisci fuga molestiae et facere veniam beatae, aperiam architecto illo? Error exercitationem labore reiciendis, aut aperiam enim rerum.
+					Maxime, eveniet fugiat? Nisi animi repudiandae, repellendus corrupti accusantium error rem totam eveniet perferendis voluptatem placeat quos sed voluptatibus vitae rerum? Enim nisi tenetur porro natus totam quae doloremque dolorem.
+					Quidem culpa vitae repudiandae, deleniti veritatis quaerat libero molestiae commodi blanditiis incidunt dicta accusamus quo obcaecati optio neque ratione distinctio minima quam. Velit repudiandae nam harum non tempore, illo corrupti!
+					Quos veritatis voluptatem magnam veniam nesciunt. Soluta obcaecati laudantium velit magni adipisci molestias quasi accusamus at quos, voluptatibus excepturi perspiciatis nulla inventore sed molestiae voluptatum laborum illum minima nostrum consequuntur!
+					Facilis, voluptas officiis aliquam eum porro nesciunt fugit quas fugiat earum voluptatibus, placeat eos quod! Commodi temporibus hic nam voluptatem necessitatibus quia esse! Modi eius provident qui placeat quas hic.</p>
+      </section>
+    </main>
+    <!-- <h1>Kristina</h1>
 	<canvas id="canvasFirst"></canvas>
 	<p>
 	<input type="button" value="make Lime" onclick="dolime()">
@@ -51,6 +134,6 @@
 	<input type="text">
 	<input type="color" id="color" value="#001A57" onchange="docolor()">
 	<input type="range" min="10" max="100" value="10" id="slider" oninput="dosquare()"> -->
-	<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
