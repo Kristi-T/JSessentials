@@ -13,9 +13,9 @@ body {
   margin: 20px;
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(249, 190, 246, 1) 35%,
-    rgba(177, 0, 255, 1) 100%
+    rgba(2, 0, 36, 0.395) 0%,
+    rgba(249, 190, 246, 0.395) 35%,
+    rgba(179, 0, 255, 0.395) 100%
   );
   color: #333;
   padding-top: 65px;
@@ -39,8 +39,8 @@ h2:hover {
 h3 {
   background: radial-gradient(
     circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
+    rgba(238, 174, 202, 0.6) 0%,
+    rgba(148, 187, 233, 0.6) 100%
   );
   cursor: pointer;
   transition: font-size 0.3s ease;
@@ -70,6 +70,15 @@ p {
 			} */
 }
 
+header h1 {
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 .container {
   width: 100%;
   max-width: 1288px;
@@ -79,11 +88,11 @@ p {
 
 .section {
   margin-bottom: 16px;
-  margin-top: 16px;
+  margin-top: 48px;
   background: radial-gradient(
     circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
+    rgba(238, 174, 202, 0.655) 0%,
+    rgba(148, 187, 233, 0.655) 100%
   );
   border: 1px solid #ddd;
   padding: 20px;
@@ -101,7 +110,12 @@ p {
 /* Buttons */
 
 .toggle-btn {
-  background-color: #f4f4f4;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.5) 0%,
+    rgba(148, 187, 233, 0.5) 100%
+  );
+  border-radius: 8px;
   padding: 10px;
   cursor: pointer;
 }
