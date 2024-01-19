@@ -1,3 +1,19 @@
+:root {
+	--color-brand-normal: #819b57;
+	--color-brand-dark: #465929;
+	--color-brand-light: #cfcfbc;
+	--color-primary-light: #faf4ea;
+	--color-primary-dark: #31261a;
+	--color-secondary-dark: #a18268;
+	/* --background-url: "../images/header-background.jpg";
+	--background-url-2x: "../images/header-background@2x.jpg"; */
+}
+
+/* $bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px; */
+
+
 /* Palette https://colorhunt.co/palette/f9efdbebd9b49dbc98638889  */
 
 /* Main */
@@ -104,7 +120,7 @@ header h1 {
   display: none;
   padding: 10px;
   border: 1px solid #ddd;
-  background-color: #b9f0fbae;
+  /* background-color: #b9f0fbae; */
 }
 
 /* Buttons */
@@ -136,8 +152,14 @@ header h1 {
 
 /* Primary button style */
 .primary-button {
-  background-color: #001a57; /* Dark blue */
-  color: #fff; /* White text */
+  font-size: 1.2em;
+  margin: -6px 10px 0px 0px;
+  background-color: var(--color-secondary-dark);
+  color: var(--color-primary-dark);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Secondary button style */
@@ -153,19 +175,19 @@ header h1 {
 
 /* Lists */
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 8px;
-  position: relative;
+.mainList {
+  list-style-type: circle;
   padding-left: 20px;
 }
 
-li:before {
-  content: "\2022"; /* Unicode character for a bullet point */
+.mainListItem {
+  margin-bottom: 8px;
+  position: relative;
+  color: #555; /* Dark gray */
+}
+
+.mainListItem:before {
+  /* content: "\2022";  Unicode character for a bullet point */
   color: #638889; /* Light teal */
   font-size: 1.2em;
   position: absolute;
@@ -175,27 +197,82 @@ li:before {
   margin-right: 10px;
 }
 
-/* Adjusted styles for the list items */
-li {
-  color: #555; /* Dark gray */
-}
 
 /* Additional styling for the list items on hover */
-li:hover {
+.mainListItem:hover {
   color: #001a57; /* Dark blue */
+}
+
+/* TODO List */
+
+/* .toDoListHeader {
+  	color: var(--color-primary-dark);
+			font-size: 98px;
+			font-weight: 900;
+			line-height: 1.5;
+} */
+
+.toDoList {
+ padding-left: 0;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.toDoListItem {
+  background-color: #eee;
+  border: 1px solid #c3c3c3;
+  padding: 10px 0px 10px 5px;
+  
+}
+.addToDOitem {
+  display: flex;
+  gap: 16px;
+}
+
+/* Step 5 below here */
+.done {
+color: var(--color-brand-light);
+background-color: green;
+}
+
+.remove {
+color: var(--color-brand-light);
+background-color: red;
+}
+
+/* mark task as finished */
+/* Step 6 below here */
+li.finished {
+color: var(--color-brand-normal);
+background: radial-gradient(
+  circle,
+  rgba(169, 169, 169, 0.4) 0%, /* Light gray with reduced opacity */
+  rgba(128, 128, 128, 0.4) 100% /* Darker gray with reduced opacity */
+);
+text-decoration: line-through;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  width: 94%;
+  padding: 10px;
+}
+
+#addButton {
+  padding: 10px;
+}
+
+/* Step 10 below here */
+.yellowbackground {
+}
+
+/* Step 12 below here */
+#divabout {
 }
 
 /* Input */
 
-input[type="button"] {
-  background-color: #001a57;
-  color: #638889;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
-}
+
 
 input[type="color"] {
   margin-right: 10px;
