@@ -233,11 +233,15 @@ header h1 {
 .done {
 color: var(--color-brand-light);
 background-color: green;
+border-radius: 12px;
+border: 1px solid var(--color-brand-light);
 }
 
 .remove {
 color: var(--color-brand-light);
 background-color: red;
+border-radius: 12px;
+border: 1px solid var(--color-brand-light);
 }
 
 /* mark task as finished */
@@ -258,9 +262,6 @@ input[type="text"] {
   padding: 10px;
 }
 
-#addButton {
-  padding: 10px;
-}
 
 /* Step 10 below here */
 .yellowbackground {
@@ -280,4 +281,32 @@ input[type="color"] {
 
 input[type="range"] {
   margin-top: 10px;
+}
+
+
+.about-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-btn:hover {
+  color: #000;
 }

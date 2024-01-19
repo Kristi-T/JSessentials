@@ -34,10 +34,12 @@ function remove(item) {
   }
 }
 
-/* Step 11 below here */
 function doAbout() {
-
+  var aboutPopup = document.getElementById("aboutPopup");
+  aboutPopup.style.display = "block";
 }
 
-/* Step 14 below here */
-function clearAbout() {}
+function closeAboutPopup() {
+  var aboutPopup = document.getElementById("aboutPopup");
+  aboutPopup.style.display = "none";
+}

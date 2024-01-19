@@ -133,8 +133,8 @@
           <h4 class="toDOListHeader">TO DO List</h4>
           
           <div class="addToDOitem">
-          <input type="text" name="My task" id="taskText" placeholder="Enter task..." />
-          <input type="button" id=”addButton” class="button secondary-button" value="Add task" onclick="addTask()" />
+              <input type="text" name="My task" id="taskText" placeholder="Enter task..." />
+              <input type="button" id=”addButton” class="button secondary-button" value="Add task" onclick="addTask()" />
           </div>
           <hr>
           <ul id="tasks" class="toDoList">
@@ -146,9 +146,12 @@
           </ul>
           <hr>
           <div class="divabout" id="divabout">
-          <input type="button" class="button secondary-button" value="About" onclick="doAbout()">
+             <input type="button" class="button secondary-button" value="About" onclick="doAbout()">
           </div>
-          
+          <div id="aboutPopup" class="about-popup">
+            <span onclick="closeAboutPopup()" class="close-btn">&times;</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+           </div>
               
           <!-- STEP 13 below here  -->
       </section>
