@@ -65,7 +65,7 @@
             <input
               type="color"
               id="color"
-              value="#001A57"
+              value="#f0a3ff"
               onchange="doColor()" />
             <input
               type="range"
@@ -156,19 +156,38 @@
               
           <!-- STEP 13 below here  -->
       </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="toggle-btn">Section 4</h3>
+          <div class="content" id="content-div-2">
+            <p>This is section with changing colors and text.</p>
+            <div id="divFuchsia" class="bgColorFuchsia">
+              <p>Hello World!</p>
+            </div>
+            <div id="divOrange" class="bgColorOrange">
+              <p>Nice to meet you!</p>
+            </div>
+            <div>
+            <input type="button" id="changeColorButton" class="button primary-button" value="Change color" onclick="changeColor()">
+            <input type="button" id="changeTextButton" class="button primary-button" value="Change text" onclick="changeText()">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- 
 	<canvas id="canvasFirst"></canvas>
 	<p>
-	<input type="button" value="make Lime" onclick="dolime()">
+	<input type="button" value="make Lime" onclick="dolime()">id="change" 
 	<input type="button" value="make Yellow" onclick="doyellow()">
 	</p>
 	<input type="text">
 	<input type="color" id="color" value="#001A57" onchange="docolor()">
 	<input type="range" min="10" max="100" value="10" id="slider" oninput="dosquare()"> -->
-    <script src="script.js"></script>
-		<script src="canvasSection.js"></script>
-		<script src="alertsSection.js"></script>
-		<script src="toDoList.js"></script>
+    <script src="../js/script.js"></script>
+		<script src="../js/canvasSection.js"></script>
+		<script src="../js/alertsSection.js"></script>
+		<script src="../js/toDoList.js"></script>
+		<script src="../js/colorChange.js"></script>
   </body>
 </html>

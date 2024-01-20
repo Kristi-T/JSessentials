@@ -72,6 +72,7 @@ p {
   line-height: 1.5;
   color: #555;
   margin-bottom: 15px;
+  margin-left: 12px;
 }
 
 /* Header */
@@ -170,13 +171,19 @@ header h1 {
 }
 
 /* Hover effect */
-.button:hover {
+.secondary-button:hover {
   background-color: #444; /* Darker background color on hover */
-   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
-  transform: translateY(-7px);
+  transform: translateY(-3px);
 }
 
+.primary-button:hover {
+  background-color: #444; /* Darker background color on hover */
+  box-shadow: 0px 15px 20px rgba(161, 130, 104, 0.6);
+  color: #fff;
+  transform: translateY(-3px);
+}
 
 /* Lists */
 
@@ -209,13 +216,6 @@ header h1 {
 }
 
 /* TODO List */
-
-/* .toDoListHeader {
-  	color: var(--color-primary-dark);
-			font-size: 98px;
-			font-weight: 900;
-			line-height: 1.5;
-} */
 
 .toDoList {
  padding-left: 0;
@@ -280,14 +280,16 @@ input[type="text"] {
 
 /* Input */
 
-
-
 input[type="color"] {
   margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-brand-light);
 }
 
 input[type="range"] {
   margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-brand-light);
 }
 
 
@@ -316,4 +318,41 @@ input[type="range"] {
 
 .close-btn:hover {
   color: #000;
+}
+
+.bgColorFuchsia{
+background-color: fuchsia;
+border: none;
+border-radius: 4px;
+}
+
+.bgColorOrange{
+background-color: orangered;
+border: none;
+border-radius: 4px;}
+
+.bgColorBlue{
+background-color: blue;
+border: none;
+border-radius: 4px;}
+
+.bgColorYellow{
+background-color: yellow;
+border: none;
+border-radius: 4px;}
+
+.colorChanges{
+display: flex;
+gap: 16px;
+}
+
+/* Додайте це правило для внутрішнього відступу всередині .colorChanges */
+.colorChanges > div {
+  margin-bottom: 16px; 
+  width: 50%;
+}
+
+/* Якщо не хочете внутрішній відступ для останнього div */
+.colorChanges > div:last-child {
+  margin-right: 0;
 }
