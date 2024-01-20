@@ -9,8 +9,9 @@ function addTask() {
     // add HTML for buttons and new task text
     // Note, need to use '' because of "" in HTML
     item.innerHTML =
-      '<input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" /> ' +
-      '<input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" /> ' +
+      '<input type="button" class="done secondary-button" onclick="markDone(this.parentNode)" value="&#x2713;" /> ' +
+      '<input type="button" class="remove secondary-button" onclick="remove(this.parentNode)" value="&#x2715;" /> ' +
+      '<input type="button" class="important secondary-button" onclick="remove(this.parentNode)" value="&#x0021;" /> '+
       newTask;
     // add new item as part of existing list
     document.getElementById("tasks").appendChild(item);
@@ -42,4 +43,10 @@ function doAbout() {
 function closeAboutPopup() {
   var aboutPopup = document.getElementById("aboutPopup");
   aboutPopup.style.display = "none";
+}
+
+function markImportant(item) {
+  if (item.className != "finished") {
+    item.className = "important";
+  }
 }

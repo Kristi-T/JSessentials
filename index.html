@@ -139,8 +139,9 @@
           <hr>
           <ul id="tasks" class="toDoList">
             <li class="toDoListItems">
-              <input type="button" class="done secondary-button" onclick="markDone(this.parentNode)" value="&#x2713;" />
-              <input type="button" class="remove secondary-button" onclick="remove(this.parentNode)" value="&#x2715;" />
+              <input type="button" class="done secondary-button" onclick="markDone(this.parentNode)" value="&#x2713;" title="Mark as done" />
+              <input type="button" class="remove secondary-button" onclick="remove(this.parentNode)" value="&#x2715;" title="Remove done" />
+              <input type="button" class="important secondary-button" onclick="markImportant(this.parentNode)" value="&#x0021;" title="Mark as important" />
               make todo list
             </li>
           </ul>
