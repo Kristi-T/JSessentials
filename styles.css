@@ -72,6 +72,7 @@ p {
   line-height: 1.5;
   color: #555;
   margin-bottom: 15px;
+  margin-left: 12px;
 }
 
 /* Header */
@@ -120,6 +121,7 @@ header h1 {
   display: none;
   padding: 10px;
   border: 1px solid #ddd;
+  border-radius: 4px;
   /* background-color: #b9f0fbae; */
 }
 
@@ -169,8 +171,18 @@ header h1 {
 }
 
 /* Hover effect */
-.button:hover {
+.secondary-button:hover {
   background-color: #444; /* Darker background color on hover */
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.primary-button:hover {
+  background-color: #444; /* Darker background color on hover */
+  box-shadow: 0px 15px 20px rgba(161, 130, 104, 0.6);
+  color: #fff;
+  transform: translateY(-3px);
 }
 
 /* Lists */
@@ -205,13 +217,6 @@ header h1 {
 
 /* TODO List */
 
-/* .toDoListHeader {
-  	color: var(--color-primary-dark);
-			font-size: 98px;
-			font-weight: 900;
-			line-height: 1.5;
-} */
-
 .toDoList {
  padding-left: 0;
   list-style-type: none;
@@ -233,14 +238,22 @@ header h1 {
 .done {
 color: var(--color-brand-light);
 background-color: green;
-border-radius: 12px;
+border-radius: 8px;
 border: 1px solid var(--color-brand-light);
+
 }
 
 .remove {
 color: var(--color-brand-light);
 background-color: red;
-border-radius: 12px;
+border-radius: 8px;
+border: 1px solid var(--color-brand-light);
+}
+
+.important{
+color: var(--color-primary-dark);
+background-color: yellow;
+border-radius: 8px;
 border: 1px solid var(--color-brand-light);
 }
 
@@ -260,27 +273,23 @@ input[type="text"] {
   font-size: 18px;
   width: 94%;
   padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-brand-light);
 }
 
-
-/* Step 10 below here */
-.yellowbackground {
-}
-
-/* Step 12 below here */
-#divabout {
-}
 
 /* Input */
 
-
-
 input[type="color"] {
   margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-brand-light);
 }
 
 input[type="range"] {
   margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-brand-light);
 }
 
 
@@ -309,4 +318,41 @@ input[type="range"] {
 
 .close-btn:hover {
   color: #000;
+}
+
+.bgColorFuchsia{
+background-color: fuchsia;
+border: none;
+border-radius: 4px;
+}
+
+.bgColorOrange{
+background-color: orangered;
+border: none;
+border-radius: 4px;}
+
+.bgColorBlue{
+background-color: blue;
+border: none;
+border-radius: 4px;}
+
+.bgColorYellow{
+background-color: yellow;
+border: none;
+border-radius: 4px;}
+
+.colorChanges{
+display: flex;
+gap: 16px;
+}
+
+/* Додайте це правило для внутрішнього відступу всередині .colorChanges */
+.colorChanges > div {
+  margin-bottom: 16px; 
+  width: 50%;
+}
+
+/* Якщо не хочете внутрішній відступ для останнього div */
+.colorChanges > div:last-child {
+  margin-right: 0;
 }
