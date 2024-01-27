@@ -272,7 +272,7 @@ text-decoration: line-through;
 
 input[type="text"] {
   font-size: 18px;
-  width: 94%;
+  width: 50%;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid var(--color-brand-light);
@@ -368,3 +368,27 @@ background-color: green;
 
 .transparent{
 background-color: transparent;}
+
+.button-container {
+  text-align: center; /* Центрує контейнер */
+}
+
+.button-container input[type="button"] {
+  margin: 5px; /* Додайте відступ між кнопками */
+}
+
+/* Для екранів шириною більше 600px встановіть по 3 кнопки в ряд */
+@media (min-width: 600px) {
+  .button-container input[type="button"] {
+    width: calc(33.33% - 10px); /* 10px - урахування відступів */
+    box-sizing: border-box;
+  }
+}
+
+/* Для екранів шириною менше або рівно 600px встановіть по 2 кнопки в ряд */
+@media (max-width: 600px) {
+  .button-container input[type="button"] {
+    width: calc(50% - 10px); /* 10px - урахування відступів */
+    box-sizing: border-box;
+  }
+}
