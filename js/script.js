@@ -18,6 +18,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Functions
 
-// TODO list Section
