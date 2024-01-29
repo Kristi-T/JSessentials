@@ -11,7 +11,7 @@ function addTask() {
     item.innerHTML =
       '<input type="button" class="done secondary-button" onclick="markDone(this.parentNode)" value="&#x2713;" /> ' +
       '<input type="button" class="remove secondary-button" onclick="remove(this.parentNode)" value="&#x2715;" /> ' +
-      '<input type="button" class="important secondary-button" onclick="remove(this.parentNode)" value="&#x0021;" /> '+
+      '<input type="button" class="important secondary-button" onclick="remove(this.parentNode)" value="&#x0021;" /> ' +
       newTask;
     // add new item as part of existing list
     document.getElementById("tasks").appendChild(item);
@@ -29,9 +29,8 @@ function markDone(item) {
 /* Step 7 below here */
 function remove(item) {
   // remove item completely from document
-  if (item.className == "finished")
-  {
-    item.remove()
+  if (item.className == "finished") {
+    item.remove();
   }
 }
 
@@ -47,6 +46,10 @@ function closeAboutPopup() {
 
 function markImportant(item) {
   if (item.className != "finished") {
-    item.className = "important";
+    if (item.classList.contains("important")) {
+      item.classList.remove("important");
+    } else {
+      item.classList.add("important");
+    }
   }
 }
