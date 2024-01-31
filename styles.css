@@ -17,7 +17,7 @@ $bp-desktop: 1280px; */
 
 /* Main */
 
-canvas {
+.canvas {
   width: 450px;
   height: 300px;
   border: 2px dotted salmon;
@@ -395,8 +395,8 @@ input[type="range"] {
 /*Drawing section*/
 
 .drawingCanvas {
-  width: 600px;
-  height: 300px;
+  /* width: 600px;
+  height: 300px; */
   border: 2px solid black;
   margin: 10px;
 }
@@ -430,4 +430,17 @@ cite {
   font-size: 14px; /* Adjust font size as needed */
   border: 1px solid #ccc; /* Add border */
   border-radius: 4px; /* Add border-radius for rounded corners */
+  max-width: 200px;
+}
+
+.canvasDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Встановлює відступ між елементами у стовпчик */
+  align-items: flex-start; /* Вирівнює елементи по лівому краю */
+  padding: 12px; /* Додає відступи навколо контейнера */
+}
+
+.controls {
+  padding-bottom: 12px;
 }

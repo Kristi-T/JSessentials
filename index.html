@@ -44,7 +44,7 @@
                 drawing a square using the &lt;input&gt; <i>type="range"</i>
               </li>
             </ul>
-            <canvas id="canvasFirst"></canvas>
+            <canvas id="canvasFirst" class="canvas"></canvas>
             <p>
               <input
                 type="button"
@@ -236,8 +236,8 @@
             <p>This is another section with canvas that changes its color.</p>
             <p>Also you can clear canvas by pressing "Clear" button.</p>
             <div class="canvasDiv">
-              <canvas id="canvasOrange" class="transparent"> </canvas>
-              <canvas id="canvasPink" class="transparent"> </canvas>
+              <canvas id="canvasOrange" class="canvas transparent"> </canvas>
+              <canvas id="canvasPink" class="canvas transparent"> </canvas>
             </div>
             <div class="button-container">
               <input
@@ -292,19 +292,46 @@
             </div>
 
             <div class="canvasDiv">
+              <p>Set Width between 50 and 800</p>
               <input
                 type="text"
                 id="inputCanvasWidth"
                 class="canvasResolution"
-                placeholder="Set Width" />
+                placeholder="Width"
+                min="50"
+                max="800"
+                onchange="setWidth(this.value)" />
+              <p>Set Height between 50 and 800</p>
               <input
                 type="text"
                 id="inputCanvasHeight"
                 class="canvasResolution"
-                placeholder="Set Height" />
-              <canvas id="drawingCanvas" class="drawingCanvas"> </canvas>
-              <input type="color" id="brushColor" name="Brush color" />
-              <input type="range" id="brushSize" name="Brush size" />
+                placeholder="Height"
+                min="50"
+                max="800"
+                onchange="setHeight(this.value)" />
+              <canvas
+                id="drawingCanvas"
+                class="drawingCanvas"
+                onmousedown="startPaint()"
+                onmousemove="doPaint(event)"
+                onmouseup="endPaint()">
+              </canvas>
+              <div class="controls">
+                <input
+                  type="color"
+                  id="brushColor"
+                  name="Brush color"
+                  onchange="setColor(this.value)" />
+                <input
+                  type="range"
+                  id="brushSize"
+                  name="Brush size"
+                  onchange="resizeBrush(this.value)"
+                  min="1"
+                  max="50"
+                  value="50" /><output id="sizeOutput">50</output>
+              </div>
               <input
                 type="button"
                 id="clearCanvas"
