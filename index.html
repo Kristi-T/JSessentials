@@ -36,10 +36,15 @@
               <li class="mainListItem">using some simple JS functions</li>
               <li class="mainListItem">changing canvas color via buttons</li>
               <li class="mainListItem">adding text to the &lt;canvas&gt;</li>
-              <li class="mainListItem">color selector for &lt;canvas&gt; via &lt;input&gt; <i>type="color"</i></li>
-              <li class="mainListItem">drawing a square using the &lt;input&gt; <i>type="range"</i></li>
+              <li class="mainListItem">
+                color selector for &lt;canvas&gt; via &lt;input&gt;
+                <i>type="color"</i>
+              </li>
+              <li class="mainListItem">
+                drawing a square using the &lt;input&gt; <i>type="range"</i>
+              </li>
             </ul>
-            <canvas id="canvasFirst"></canvas>
+            <canvas id="canvasFirst" class="canvas"></canvas>
             <p>
               <input
                 type="button"
@@ -102,8 +107,11 @@
                 value="Button 2"
                 onclick="alertFunction()" />
             </div>
-						<div class="div3" id="div3">
-              <p>Here is <b>confirmation message</b> that is called by JS function.</p>
+            <div class="div3" id="div3">
+              <p>
+                Here is <b>confirmation message</b> that is called by JS
+                function.
+              </p>
               <input
                 type="button"
                 id="confirmButton"
@@ -111,50 +119,87 @@
                 value="Confirm changing button color"
                 onclick="confirmColorChange()" />
             </div>
-						<div class="div4" id="div4">
-						<p>Here is also <b>confirmation message</b> with choice <b>alert message</b> that is called by JS function.</p>
-							<input
-									type="button"
-									id="confirmButton"
-									class="button secondary-button"
-									value="Confirm your choice"
-									onclick="handleConfirmation()" />
-						</div>
+            <div class="div4" id="div4">
+              <p>
+                Here is also <b>confirmation message</b> with choice
+                <b>alert message</b> that is called by JS function.
+              </p>
+              <input
+                type="button"
+                id="confirmButton"
+                class="button secondary-button"
+                value="Confirm your choice"
+                onclick="handleConfirmation()" />
+            </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <h3 class="toggle-btn">Section 3</h3>
-          <div class="content" id="content-div-3"><p>Here you can see simple TODO list.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ullam eos, cupiditate nobis deleniti voluptates tenetur, <br>necessitatibus totam voluptatum culpa earum enim corporis dolore explicabo officiis veritatis commodi similique quod quis.</p>
-					<br>
-         
-          <h4 class="toDOListHeader">TO DO List</h4>
-          
-          <div class="addToDOitem">
-              <input type="text" name="My task" id="taskText" placeholder="Enter task..." />
-              <input type="button" id=”addButton” class="button secondary-button" value="Add task" onclick="addTask()" />
+          <div class="content" id="content-div-3">
+            <p>Here you can see simple TODO list.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Ullam eos, cupiditate nobis deleniti voluptates tenetur,
+              <br />necessitatibus totam voluptatum culpa earum enim corporis
+              dolore explicabo officiis veritatis commodi similique quod quis.
+            </p>
+            <br />
+
+            <h4 class="toDOListHeader">TO DO List</h4>
+
+            <div class="addToDOitem">
+              <input
+                type="text"
+                name="My task"
+                id="taskText"
+                placeholder="Enter task..." />
+              <input
+                type="button"
+                id="”addButton”"
+                class="button secondary-button"
+                value="Add task"
+                onclick="addTask()" />
+            </div>
+            <hr />
+            <ul id="tasks" class="toDoList">
+              <li class="toDoListItems">
+                <input
+                  type="button"
+                  class="done secondary-button"
+                  onclick="markDone(this.parentNode)"
+                  value="&#x2713;"
+                  title="Mark as done" />
+                <input
+                  type="button"
+                  class="remove secondary-button"
+                  onclick="remove(this.parentNode)"
+                  value="&#x2715;"
+                  title="Remove done" />
+                <input
+                  type="button"
+                  class="important secondary-button"
+                  onclick="markImportant(this.parentNode)"
+                  value="&#x0021;"
+                  title="Mark as important" />
+                make todo list
+              </li>
+            </ul>
+            <hr />
+            <div class="divabout" id="divabout">
+              <input
+                type="button"
+                class="button secondary-button"
+                value="About"
+                onclick="doAbout()" />
+            </div>
+            <div id="aboutPopup" class="about-popup">
+              <span onclick="closeAboutPopup()" class="close-btn">&times;</span>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
           </div>
-          <hr>
-          <ul id="tasks" class="toDoList">
-            <li class="toDoListItems">
-              <input type="button" class="done secondary-button" onclick="markDone(this.parentNode)" value="&#x2713;" title="Mark as done" />
-              <input type="button" class="remove secondary-button" onclick="remove(this.parentNode)" value="&#x2715;" title="Remove done" />
-              <input type="button" class="important secondary-button" onclick="markImportant(this.parentNode)" value="&#x0021;" title="Mark as important" />
-              make todo list
-            </li>
-          </ul>
-          <hr>
-          <div class="divabout" id="divabout">
-             <input type="button" class="button secondary-button" value="About" onclick="doAbout()">
-          </div>
-          <div id="aboutPopup" class="about-popup">
-            <span onclick="closeAboutPopup()" class="close-btn">&times;</span>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-           </div>
-              
-          <!-- STEP 13 below here  -->
+        </div>
       </section>
       <section class="section">
         <div class="container">
@@ -168,34 +213,132 @@
               <p>Nice to meet you!</p>
             </div>
             <div>
-            <input type="button" id="changeColorButton" class="button primary-button" value="Change color" onclick="changeColor()">
-            <input type="button" id="changeTextButton" class="button primary-button" value="Change text" onclick="changeText()">
+              <input
+                type="button"
+                id="changeColorButton"
+                class="button primary-button"
+                value="Change color"
+                onclick="changeColor()" />
+              <input
+                type="button"
+                id="changeTextButton"
+                class="button primary-button"
+                value="Change text"
+                onclick="changeText()" />
             </div>
           </div>
         </div>
       </section>
-       <section class="section">
+      <section class="section">
         <div class="container">
           <h3 class="toggle-btn">Section 5</h3>
           <div class="content" id="content-div-2">
             <p>This is another section with canvas that changes its color.</p>
             <p>Also you can clear canvas by pressing "Clear" button.</p>
             <div class="canvasDiv">
-            <canvas id="canvasOrange" class="transparent">
-            </canvas>
-            <canvas id="canvasPink" class="transparent">
-            </canvas>
+              <canvas id="canvasOrange" class="canvas transparent"> </canvas>
+              <canvas id="canvasPink" class="canvas transparent"> </canvas>
             </div>
             <div class="button-container">
-            <input type="text" id="inputCanvasText" class="" placeholder="Input your name" oninput="addTextViaInput()">
+              <input
+                type="text"
+                id="inputCanvasText"
+                class=""
+                placeholder="Input your name"
+                oninput="addTextViaInput()" />
             </div>
             <div class="button-container">
-            <input type="button" id="changeCanvasColor" class="button primary-button" value="Add colors" onclick="changeCanvasColor()">
-            <input type="button" id="changeCanvasColorBtnPink" class="button primary-button" value="Do pink" onclick="doPink()">
-            <input type="button" id="changeCanvasColorBtnOrange" class="button primary-button" value="Do orange" onclick="doOrange()">
-            <input type="button" id="clearCanvas" class="button primary-button" value="Clear Canvas" onclick="clearCanvas()">
+              <input
+                type="button"
+                id="changeCanvasColor"
+                class="button primary-button"
+                value="Add colors"
+                onclick="changeCanvasColor()" />
+              <input
+                type="button"
+                id="changeCanvasColorBtnPink"
+                class="button primary-button"
+                value="Do pink"
+                onclick="doPink()" />
+              <input
+                type="button"
+                id="changeCanvasColorBtnOrange"
+                class="button primary-button"
+                value="Do orange"
+                onclick="doOrange()" />
+              <input
+                type="button"
+                id="clearCanvas"
+                class="button primary-button"
+                value="Clear Canvas"
+                onclick="clearCanvas()" />
             </div>
-           
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="toggle-btn">Section 6</h3>
+          <div class="content" id="content-div-2">
+            <h4 style="text-transform: capitalize">Paint your own picture</h4>
+            <div class="quote">
+              <blockquote>
+                <p>
+                  Drawing is the honesty of the art. There is no possibility of
+                  cheating. It is either good or bad.
+                </p>
+                <cite>Salvador Dali</cite>
+              </blockquote>
+            </div>
+
+            <div class="canvasDiv">
+              <p>Set Width between 50 and 800</p>
+              <input
+                type="text"
+                id="inputCanvasWidth"
+                class="canvasResolution"
+                placeholder="Width"
+                min="50"
+                max="800"
+                onchange="setWidth(this.value)" />
+              <p>Set Height between 50 and 800</p>
+              <input
+                type="text"
+                id="inputCanvasHeight"
+                class="canvasResolution"
+                placeholder="Height"
+                min="50"
+                max="800"
+                onchange="setHeight(this.value)" />
+              <canvas
+                id="drawingCanvas"
+                class="drawingCanvas"
+                onmousedown="startPaint()"
+                onmousemove="doPaint(event)"
+                onmouseup="endPaint()">
+              </canvas>
+              <div class="controls">
+                <input
+                  type="color"
+                  id="brushColor"
+                  name="Brush color"
+                  onchange="setColor(this.value)" />
+                <input
+                  type="range"
+                  id="brushSize"
+                  name="Brush size"
+                  onchange="resizeBrush(this.value)"
+                  min="1"
+                  max="50"
+                  value="50" /><output id="sizeOutput">50</output>
+              </div>
+              <input
+                type="button"
+                id="clearCanvas"
+                class="button primary-button"
+                value="Clear Canvas"
+                onclick="clearDrawing()" />
+            </div>
           </div>
         </div>
       </section>
@@ -209,11 +352,12 @@
 	<input type="text">
 	<input type="color" id="color" value="#001A57" onchange="docolor()">
 	<input type="range" min="10" max="100" value="10" id="slider" oninput="dosquare()"> -->
-   		<script src="js/script.js"></script>
-		<script src="js/canvasSection.js"></script>
-		<script src="js/alertsSection.js"></script>
-		<script src="js/toDoList.js"></script>
-		<script src="js/colorChange.js"></script>
-    		<script src="js/canvasClear.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/canvasSection.js"></script>
+    <script src="js/alertsSection.js"></script>
+    <script src="js/toDoList.js"></script>
+    <script src="js/colorChange.js"></script>
+    <script src="js/canvasClear.js"></script>
+    <script src="js/drawing.js"></script>
   </body>
 </html>

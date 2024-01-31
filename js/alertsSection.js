@@ -3,7 +3,7 @@
 function confirmColorChange() {
   var dd1 = document.getElementById("confirmButton");
   var userConfirmed = confirm(
-    "Do you want to change the button color to yellow?"
+    "Do you want to change the button color to yellow?",
   );
   if (userConfirmed) {
     dd1.style.backgroundColor = "yellow";

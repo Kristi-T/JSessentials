@@ -5,7 +5,6 @@ var changeColorButton = document.getElementById("changeColorButton");
 var changeTextButton = document.getElementById("changeTextButton");
 
 function changeColor() {
-
   if (divElement1.className == "bgColorFuchsia") {
     divElement1.className = "bgColorBlue";
   } else {
@@ -23,13 +22,12 @@ function changeColor() {
   } else {
     changeColorButton.value = "Reset color";
   }
-
 }
 
 function changeText() {
   // divElement1.querySelector("p").innerHTML = "Glory Ukraine!!!";
   // divElement2.querySelector("p").innerHTML = "To the heroes Glory!!!";
-  
+
   if (divElement1.querySelector("p").innerHTML === "Glory Ukraine!!!") {
     changeTextButton.value = "Reset text";
     divElement1.querySelector("p").innerHTML = "Hello World!";
@@ -43,5 +41,4 @@ function changeText() {
   } else {
     divElement2.querySelector("p").innerHTML = "To the heroes Glory!!!";
   }
-
 }

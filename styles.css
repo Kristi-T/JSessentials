@@ -1,11 +1,11 @@
 :root {
-	--color-brand-normal: #819b57;
-	--color-brand-dark: #465929;
-	--color-brand-light: #cfcfbc;
-	--color-primary-light: #faf4ea;
-	--color-primary-dark: #31261a;
-	--color-secondary-dark: #a18268;
-	/* --background-url: "../images/header-background.jpg";
+  --color-brand-normal: #819b57;
+  --color-brand-dark: #465929;
+  --color-brand-light: #cfcfbc;
+  --color-primary-light: #faf4ea;
+  --color-primary-dark: #31261a;
+  --color-secondary-dark: #a18268;
+  /* --background-url: "../images/header-background.jpg";
 	--background-url-2x: "../images/header-background@2x.jpg"; */
 }
 
@@ -13,12 +13,11 @@
 $bp-tablet: 768px;
 $bp-desktop: 1280px; */
 
-
 /* Palette https://colorhunt.co/palette/f9efdbebd9b49dbc98638889  */
 
 /* Main */
 
-canvas {
+.canvas {
   width: 450px;
   height: 300px;
   border: 2px dotted salmon;
@@ -210,7 +209,6 @@ header h1 {
   margin-right: 10px;
 }
 
-
 /* Additional styling for the list items on hover */
 .mainListItem:hover {
   color: #001a57; /* Dark blue */
@@ -219,7 +217,7 @@ header h1 {
 /* TODO List */
 
 .toDoList {
- padding-left: 0;
+  padding-left: 0;
   list-style-type: none;
   font-size: 20px;
 }
@@ -228,7 +226,6 @@ header h1 {
   background-color: #eee;
   border: 1px solid #c3c3c3;
   padding: 10px 0px 10px 5px;
-  
 }
 .addToDOitem {
   display: flex;
@@ -237,37 +234,37 @@ header h1 {
 
 /* Step 5 below here */
 .done {
-color: var(--color-brand-light);
-background-color: green;
-border-radius: 8px;
-border: 1px solid var(--color-brand-light);
-
+  color: var(--color-brand-light);
+  background-color: green;
+  border-radius: 8px;
+  border: 1px solid var(--color-brand-light);
 }
 
 .remove {
-color: var(--color-brand-light);
-background-color: red;
-border-radius: 8px;
-border: 1px solid var(--color-brand-light);
+  color: var(--color-brand-light);
+  background-color: red;
+  border-radius: 8px;
+  border: 1px solid var(--color-brand-light);
 }
 
-.important{
-color: var(--color-primary-dark);
-background-color: yellow;
-border-radius: 8px;
-border: 1px solid var(--color-brand-light);
+.important {
+  color: var(--color-primary-dark);
+  background-color: yellow;
+  border-radius: 8px;
+  border: 1px solid var(--color-brand-light);
 }
 
 /* mark task as finished */
 /* Step 6 below here */
 li.finished {
-color: var(--color-brand-normal);
-background: radial-gradient(
-  circle,
-  rgba(169, 169, 169, 0.4) 0%, /* Light gray with reduced opacity */
-  rgba(128, 128, 128, 0.4) 100% /* Darker gray with reduced opacity */
-);
-text-decoration: line-through;
+  color: var(--color-brand-normal);
+  background: radial-gradient(
+    circle,
+    rgba(169, 169, 169, 0.4) 0%,
+    /* Light gray with reduced opacity */ rgba(128, 128, 128, 0.4) 100%
+      /* Darker gray with reduced opacity */
+  );
+  text-decoration: line-through;
 }
 
 input[type="text"] {
@@ -277,7 +274,6 @@ input[type="text"] {
   border-radius: 4px;
   border: 1px solid var(--color-brand-light);
 }
-
 
 /* Input */
 
@@ -292,7 +288,6 @@ input[type="range"] {
   border-radius: 4px;
   border: 1px solid var(--color-brand-light);
 }
-
 
 .about-popup {
   display: none;
@@ -321,35 +316,38 @@ input[type="range"] {
   color: #000;
 }
 
-.bgColorFuchsia{
-background-color: fuchsia;
-border: none;
-border-radius: 4px;
+.bgColorFuchsia {
+  background-color: fuchsia;
+  border: none;
+  border-radius: 4px;
 }
 
-.bgColorOrange{
-background-color: orangered;
-border: none;
-border-radius: 4px;}
+.bgColorOrange {
+  background-color: orangered;
+  border: none;
+  border-radius: 4px;
+}
 
-.bgColorBlue{
-background-color: blue;
-border: none;
-border-radius: 4px;}
+.bgColorBlue {
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+}
 
-.bgColorYellow{
-background-color: yellow;
-border: none;
-border-radius: 4px;}
+.bgColorYellow {
+  background-color: yellow;
+  border: none;
+  border-radius: 4px;
+}
 
-.colorChanges{
-display: flex;
-gap: 16px;
+.colorChanges {
+  display: flex;
+  gap: 16px;
 }
 
 /* Додайте це правило для внутрішнього відступу всередині .colorChanges */
 .colorChanges > div {
-  margin-bottom: 16px; 
+  margin-bottom: 16px;
   width: 50%;
 }
 
@@ -358,16 +356,17 @@ gap: 16px;
   margin-right: 0;
 }
 
-.greyback{
-background-color: grey;
+.greyback {
+  background-color: grey;
 }
 
-.greenback{
-background-color: green;
+.greenback {
+  background-color: green;
 }
 
-.transparent{
-background-color: transparent;}
+.transparent {
+  background-color: transparent;
+}
 
 .button-container {
   text-align: center; /* Центрує контейнер */
@@ -391,4 +390,57 @@ background-color: transparent;}
     width: calc(50% - 10px); /* 10px - урахування відступів */
     box-sizing: border-box;
   }
+}
+
+/*Drawing section*/
+
+.drawingCanvas {
+  /* width: 600px;
+  height: 300px; */
+  border: 2px solid black;
+  margin: 10px;
+}
+
+blockquote {
+  background-color: #f9f9f9;
+  border-left: 4px solid #333;
+  margin: 0;
+  padding: 10px 20px;
+  width: max-content;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+cite {
+  display: block;
+  text-align: left;
+  color: #777;
+  margin-top: 10px;
+}
+
+.quote {
+  margin: 12px;
+}
+
+.canvasResolution {
+  margin: 5px; /* Adjust margin as needed */
+  padding: 8px; /* Adjust padding as needed */
+  font-size: 14px; /* Adjust font size as needed */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  max-width: 200px;
+}
+
+.canvasDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Встановлює відступ між елементами у стовпчик */
+  align-items: flex-start; /* Вирівнює елементи по лівому краю */
+  padding: 12px; /* Додає відступи навколо контейнера */
+}
+
+.controls {
+  padding-bottom: 12px;
 }
