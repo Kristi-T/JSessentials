@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>My way to JS</title>
+    <!-- <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script> -->
   </head>
   <body>
     <header class="header">
@@ -25,7 +26,7 @@
         <div class="container">
           <!-- <h2>JS essentials</h2> -->
 
-          <h3 class="toggle-btn">Section 1</h3>
+          <h3 class="toggle-btn">Section 1. Starting with Canvas</h3>
           <div class="content" id="content-div-1">
             <p>
               This is the Section 1. Here is list of some features that was
@@ -84,7 +85,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 2</h3>
+          <h3 class="toggle-btn">Section 2. Alerts and buttons</h3>
           <div class="content" id="content-div-2">
             <p>This is section with alerts on button click.</p>
             <div class="div1" id="div1">
@@ -136,7 +137,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 3</h3>
+          <h3 class="toggle-btn">Section 3. ToDo list</h3>
           <div class="content" id="content-div-3">
             <p>Here you can see simple TODO list.</p>
             <p>
@@ -203,7 +204,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 4</h3>
+          <h3 class="toggle-btn">Section 4. Color and text</h3>
           <div class="content" id="content-div-2">
             <p>This is section with changing colors and text.</p>
             <div id="divFuchsia" class="bgColorFuchsia">
@@ -231,7 +232,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 5</h3>
+          <h3 class="toggle-btn">Section 5. Change color</h3>
           <div class="content" id="content-div-2">
             <p>This is another section with canvas that changes its color.</p>
             <p>Also you can clear canvas by pressing "Clear" button.</p>
@@ -278,7 +279,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 6</h3>
+          <h3 class="toggle-btn">Section 6. Drawing</h3>
           <div class="content" id="content-div-2">
             <h4 style="text-transform: capitalize">Paint your own picture</h4>
             <div class="quote">
@@ -345,6 +346,19 @@
       <section class="section">
         <div class="container">
           <h3 class="toggle-btn">Section 7. Image uploader</h3>
+          <div class="content">
+            <div class="canvasUploadDiv">
+              <canvas class="canvas" id="canvasUpload"></canvas>
+              <input
+                type="file"
+                multiple="false"
+                accept="image/*"
+                id="fileInput"
+                class="button secondary-button"
+                onchange="uploadImage()" />
+            </div>
+            <!-- <input type="text" id="textAlert" onchange="textAlert()" /> -->
+          </div>
         </div>
       </section>
     </main>
@@ -358,11 +372,17 @@
 	<input type="color" id="color" value="#001A57" onchange="docolor()">
 	<input type="range" min="10" max="100" value="10" id="slider" oninput="dosquare()"> -->
     <script src="js/script.js"></script>
+    <script src="js/SimpleImage.js"></script>
+    <!-- <script
+      defer
+      src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script> -->
     <script src="js/canvasSection.js"></script>
     <script src="js/alertsSection.js"></script>
     <script src="js/toDoList.js"></script>
     <script src="js/colorChange.js"></script>
     <script src="js/canvasClear.js"></script>
     <script src="js/drawing.js"></script>
+
+    <script src="js/upload.js"></script>
   </body>
 </html>

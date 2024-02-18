@@ -442,6 +442,14 @@ cite {
   padding: 12px; /* Додає відступи навколо контейнера */
 }
 
+.canvasUploadDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Встановлює відступ між елементами у стовпчик */
+  align-items: flex-start; /* Вирівнює елементи по лівому краю */
+  padding: 12px; /* Додає відступи навколо контейнера */
+}
+
 .controls {
   padding-bottom: 12px;
 }
