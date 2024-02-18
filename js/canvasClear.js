@@ -4,26 +4,26 @@ var ctx1 = canvas1.getContext("2d");
 var ctx2 = canvas2.getContext("2d");
 
 function changeCanvasColor() {
-  canvas1.className = "greyback";
-  canvas2.className = "greenback";
+  canvas1.className = "canvas greyback";
+  canvas2.className = "canvas greenback";
 }
 
 function doPink() {
-  canvas2.className = "bgColorFuchsia";
+  canvas2.className = "canvas bgColorFuchsia";
 }
 
 function doOrange() {
-  canvas1.className = "bgColorOrange";
+  canvas1.className = "canvas bgColorOrange";
 }
 
 function clearCanvas() {
-  canvas1.className = "greyback";
-  canvas2.className = "greenback";
+  // canvas1.className = "greyback";
+  // canvas2.className = "greenback";
   ctx1.clearRect(0, 0, canvas1.clientWidth, canvas1.height);
-  canvas1.className = "transparent";
-  ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+  canvas1.className = "canvas transparent greyback";
+  // ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
   ctx2.clearRect(0, 0, canvas2.clientWidth, canvas2.height);
-  canvas2.className = "transparent";
+  canvas2.className = "canvas transparent greenback";
 }
 
 function addTextViaInput() {
