@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="styles.css" />
     <title>My way to JS</title>
     <!-- <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
@@ -46,28 +49,31 @@
               </li>
             </ul>
             <canvas id="canvasFirst" class="canvas"></canvas>
-            <p>
-              <input
-                type="button"
-                class="button primary-button"
-                value="Make lime"
-                onclick="doLime()" />
-              <input
-                type="button"
-                class="button primary-button"
-                value="Make yellow"
-                onclick="doYellow()" />
-              <input
-                type="button"
-                class="button primary-button"
-                value="Add green rectangles"
-                onclick="addGreenRect()" />
-              <input
-                type="button"
-                class="button primary-button"
-                value="Add text"
-                onclick="addText()" />
-            </p>
+            <div class="button-container">
+              <p>
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Make lime"
+                  onclick="doLime()" />
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Make yellow"
+                  onclick="doYellow()" />
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Add green rectangles"
+                  onclick="addGreenRect()" />
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Add text"
+                  onclick="addText()" />
+              </p>
+            </div>
+
             <input
               type="color"
               id="color"
@@ -213,7 +219,7 @@
             <div id="divOrange" class="bgColorOrange">
               <p>Nice to meet you!</p>
             </div>
-            <div>
+            <div class="button-container">
               <input
                 type="button"
                 id="changeColorButton"
@@ -349,6 +355,7 @@
           <div class="content">
             <div class="canvasUploadDiv">
               <canvas class="canvas" id="canvasUpload"></canvas>
+
               <input
                 type="file"
                 multiple="false"
@@ -362,6 +369,35 @@
         </div>
       </section>
     </main>
+    <!-- <footer class="footer">
+      <div class="container">
+        <p class="footer-text">Copyright &#xa9; Kristina Trach, 2023</p>
+        <div class="social-media-container">
+          <ul class="wrapper">
+            <li class="icon twitter">
+              <a href="https://twitter.com/kristina_ktina" target="_blank">
+                <span class="tooltip">Twitter</span>
+                <span><i class="fab fa-twitter"></i></span>
+              </a>
+            </li>
+            <li class="icon instagram">
+              <a
+                href="https://www.instagram.com/kristina.xtina/"
+                target="_blank">
+                <span class="tooltip">Instagram</span>
+                <span><i class="fab fa-instagram"></i></span>
+              </a>
+            </li>
+            <li class="icon github">
+              <a href="https://github.com/Kristi-T" target="_blank">
+                <span class="tooltip">Github</span>
+                <span><i class="fab fa-github"></i></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer> -->
     <!-- 
 	<canvas id="canvasFirst"></canvas>
 	<p>
