@@ -11,7 +11,7 @@ function addTask() {
     item.innerHTML =
       '<input type="button" class="done secondary-button" onclick="markDone(this.parentNode)" value="&#x2713;" /> ' +
       '<input type="button" class="remove secondary-button" onclick="remove(this.parentNode)" value="&#x2715;" /> ' +
-      '<input type="button" class="important secondary-button" onclick="remove(this.parentNode)" value="&#x0021;" /> ' +
+      '<input type="button" class="important secondary-button" onclick="markImportant(this.parentNode)" value="&#x0021;" /> ' +
       newTask;
     // add new item as part of existing list
     document.getElementById("tasks").appendChild(item);
@@ -23,7 +23,11 @@ function addTask() {
 
 // change styling used for given item
 function markDone(item) {
-  item.className = "finished";
+  if (item.className != "finished") {
+    item.className = "finished";
+  } else {
+    item.className = "none";
+  }
 }
 
 /* Step 7 below here */
