@@ -12,6 +12,55 @@ let heightValue = heightInput.value;
 let canvasHeight;
 // let document.getElementById("sizeOutput").value newSize.
 
+var lastX = 0;
+var lastY = 0;
+
+// Add event listeners for touch events
+paintcanvas.addEventListener("touchstart", function (e) {
+  isPainting = true;
+  [lastX, lastY] = [
+    e.touches[0].pageX - paintcanvas.offsetLeft,
+    e.touches[0].pageY - paintcanvas.offsetTop,
+  ];
+});
+
+paintcanvas.addEventListener("touchmove", function (e) {
+  if (!isPainting) return;
+  e.preventDefault();
+  var x = e.touches[0].pageX - paintcanvas.offsetLeft;
+  var y = e.touches[0].pageY - paintcanvas.offsetTop;
+  drawLine(lastX, lastY, x, y);
+  [lastX, lastY] = [x, y];
+});
+
+paintcanvas.addEventListener("touchend", function () {
+  isDrawing = false;
+});
+
+// Function to draw a line between two points
+function drawLine(x1, y1, x2, y2) {
+  context.beginPath();
+  context.moveTo(x1, y1);
+  context.lineTo(x2, y2);
+  context.strokeStyle = "black";
+  context.lineWidth = 2;
+  context.stroke();
+  context.closePath();
+}
+
+paintcanvas.addEventListener(
+  "touchmove",
+  function (e) {
+    var touch = e.touches[0];
+    var mouseEvent = new MouseEvent("mousemove", {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+    });
+    paintcanvas.dispatchEvent(mouseEvent);
+  },
+  false
+);
+
 function clearDrawing() {
   context.clearRect(0, 0, paintcanvas.width, paintcanvas.height);
 }

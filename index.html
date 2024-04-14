@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>My way to JS</title>
+    <!-- <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
@@ -25,7 +29,7 @@
         <div class="container">
           <!-- <h2>JS essentials</h2> -->
 
-          <h3 class="toggle-btn">Section 1</h3>
+          <h3 class="toggle-btn">Section 1. Starting with Canvas</h3>
           <div class="content" id="content-div-1">
             <p>
               This is the Section 1. Here is list of some features that was
@@ -45,28 +49,31 @@
               </li>
             </ul>
             <canvas id="canvasFirst" class="canvas"></canvas>
-            <p>
-              <input
-                type="button"
-                class="button primary-button"
-                value="Make lime"
-                onclick="doLime()" />
-              <input
-                type="button"
-                class="button primary-button"
-                value="Make yellow"
-                onclick="doYellow()" />
-              <input
-                type="button"
-                class="button primary-button"
-                value="Add green rectangles"
-                onclick="addGreenRect()" />
-              <input
-                type="button"
-                class="button primary-button"
-                value="Add text"
-                onclick="addText()" />
-            </p>
+            <div class="button-container">
+              <p>
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Make lime"
+                  onclick="doLime()" />
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Make yellow"
+                  onclick="doYellow()" />
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Add green rectangles"
+                  onclick="addGreenRect()" />
+                <input
+                  type="button"
+                  class="button primary-button"
+                  value="Add text"
+                  onclick="addText()" />
+              </p>
+            </div>
+
             <input
               type="color"
               id="color"
@@ -84,7 +91,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 2</h3>
+          <h3 class="toggle-btn">Section 2. Alerts and buttons</h3>
           <div class="content" id="content-div-2">
             <p>This is section with alerts on button click.</p>
             <div class="div1" id="div1">
@@ -136,7 +143,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 3</h3>
+          <h3 class="toggle-btn">Section 3. ToDo list</h3>
           <div class="content" id="content-div-3">
             <p>Here you can see simple TODO list.</p>
             <p>
@@ -203,7 +210,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 4</h3>
+          <h3 class="toggle-btn">Section 4. Color and text</h3>
           <div class="content" id="content-div-2">
             <p>This is section with changing colors and text.</p>
             <div id="divFuchsia" class="bgColorFuchsia">
@@ -212,7 +219,7 @@
             <div id="divOrange" class="bgColorOrange">
               <p>Nice to meet you!</p>
             </div>
-            <div>
+            <div class="button-container">
               <input
                 type="button"
                 id="changeColorButton"
@@ -231,7 +238,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 5</h3>
+          <h3 class="toggle-btn">Section 5. Change color</h3>
           <div class="content" id="content-div-2">
             <p>This is another section with canvas that changes its color.</p>
             <p>Also you can clear canvas by pressing "Clear" button.</p>
@@ -278,7 +285,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h3 class="toggle-btn">Section 6</h3>
+          <h3 class="toggle-btn">Section 6. Drawing</h3>
           <div class="content" id="content-div-2">
             <h4 style="text-transform: capitalize">Paint your own picture</h4>
             <div class="quote">
@@ -342,7 +349,87 @@
           </div>
         </div>
       </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="toggle-btn">Section 7. Image uploader</h3>
+          <div class="content">
+            <div class="canvasUploadDiv">
+              <canvas class="canvas" id="canvasUpload"></canvas>
+
+              <input
+                type="file"
+                multiple="false"
+                accept="image/*"
+                id="fileInput"
+                class="button secondary-button"
+                onchange="uploadImage()" />
+            </div>
+            <!-- <input type="text" id="textAlert" onchange="textAlert()" /> -->
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6"></div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget about-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.4s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.4s;
+                  animation-name: fadeInLeft;
+                "></div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget about-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.6s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.6s;
+                  animation-name: fadeInLeft;
+                "></div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget social-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.8s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.8s;
+                  animation-name: fadeInLeft;
+                "></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container">
+          <p class="footer-text">Copyright &#xa9; Kristina Trach, 2024</p>
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-7">
+              <p class="mb-0 f_400">
+                <a
+                  href="https://codepen.io/uiswarup/pen/oNNMedZ"
+                  target="_blank"
+                  >This nice footer is from here</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-6 col-sm-5 text-right"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- 
 	<canvas id="canvasFirst"></canvas>
 	<p>
@@ -353,11 +440,17 @@
 	<input type="color" id="color" value="#001A57" onchange="docolor()">
 	<input type="range" min="10" max="100" value="10" id="slider" oninput="dosquare()"> -->
     <script src="js/script.js"></script>
+    <script src="js/SimpleImage.js"></script>
+    <!-- <script
+      defer
+      src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script> -->
     <script src="js/canvasSection.js"></script>
     <script src="js/alertsSection.js"></script>
     <script src="js/toDoList.js"></script>
     <script src="js/colorChange.js"></script>
     <script src="js/canvasClear.js"></script>
     <script src="js/drawing.js"></script>
+
+    <script src="js/upload.js"></script>
   </body>
 </html>

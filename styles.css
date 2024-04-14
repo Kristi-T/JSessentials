@@ -24,6 +24,13 @@ $bp-desktop: 1280px; */
   margin: 10px;
 }
 
+@media screen and (max-width: 1280px) {
+  .canvas {
+    padding: 0 40px;
+    width: 75%;
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -37,8 +44,21 @@ body {
   /* padding-top: 65px; */
 }
 
+@media screen and (max-width: 1280px) {
+  body {
+    text-align: center;
+  }
+}
+
 h1 {
   text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+  h1 {
+    padding: 0 40px;
+    width: 75%;
+  }
 }
 
 h2 {
@@ -102,6 +122,11 @@ header h1 {
   margin: 0 auto;
   padding: 0 24px;
 }
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 0 20px;
+  }
+}
 
 .section {
   margin-bottom: 16px;
@@ -116,6 +141,13 @@ header h1 {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 1280px) {
+  .section {
+    padding: 0 40px;
+  }
+}
+
 .content {
   margin-top: 15px;
   display: none;
@@ -123,6 +155,13 @@ header h1 {
   border: 1px solid #ddd;
   border-radius: 4px;
   /* background-color: #b9f0fbae; */
+}
+
+@media screen and (max-width: 1280px) {
+  .content {
+    padding: 0 40px;
+    width: 75%;
+  }
 }
 
 /* Buttons */
@@ -150,6 +189,15 @@ header h1 {
   border: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 1280px) {
+  .button {
+    gap: 10px;
+    font-weight: lighter;
+    text-wrap: wrap;
+    margin-bottom: 20px;
+  }
 }
 
 /* Primary button style */
@@ -222,11 +270,18 @@ header h1 {
   font-size: 20px;
 }
 
+@media screen and (max-width: 1280px) {
+  .toDoList {
+    text-align: left;
+  }
+}
+
 .toDoListItem {
   background-color: #eee;
   border: 1px solid #c3c3c3;
   padding: 10px 0px 10px 5px;
 }
+
 .addToDOitem {
   display: flex;
   gap: 16px;
@@ -301,6 +356,17 @@ input[type="range"] {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+  .about-popup {
+    width: 70%; /* Adjust the width as needed */
+    max-width: 400px; /* Set a maximum width if necessary */
+    top: 50%; /* Center vertically */
+    left: 25%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the popup */
+    padding: 10px; /* Adjust padding as needed */
+  }
 }
 
 .close-btn {
@@ -381,6 +447,7 @@ input[type="range"] {
   .button-container input[type="button"] {
     width: calc(33.33% - 10px); /* 10px - урахування відступів */
     box-sizing: border-box;
+    padding: 10px 0;
   }
 }
 
@@ -389,6 +456,7 @@ input[type="range"] {
   .button-container input[type="button"] {
     width: calc(50% - 10px); /* 10px - урахування відступів */
     box-sizing: border-box;
+    padding: 10px 0;
   }
 }
 
@@ -401,12 +469,26 @@ input[type="range"] {
   margin: 10px;
 }
 
+@media screen and (max-width: 1280px) {
+  .drawingCanvas {
+    width: 80%; /* Adjust the width as needed */
+  }
+}
+
 blockquote {
   background-color: transparent;
   border-left: 4px solid #333;
   margin: 0;
   padding: 10px 20px;
   width: max-content;
+}
+
+@media screen and (max-width: 1280px) {
+  blockquote {
+    width: 75%; /* Adjust the width as needed */
+    max-width: 75%; /* Set a maximum width if necessary */
+    text-align: left;
+  }
 }
 
 blockquote p {
@@ -442,6 +524,225 @@ cite {
   padding: 12px; /* Додає відступи навколо контейнера */
 }
 
+.canvasUploadDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Встановлює відступ між елементами у стовпчик */
+  align-items: flex-start; /* Вирівнює елементи по лівому краю */
+  padding: 12px; /* Додає відступи навколо контейнера */
+}
+
+@media screen and (max-width: 1280px) {
+  .canvasUploadDiv .button {
+    width: 75%; /* Adjust the width as needed */
+    max-width: 75%; /* Set a maximum width if necessary */
+    padding: auto;
+  }
+}
+
 .controls {
   padding-bottom: 12px;
 }
+
+/* Footer */
+
+/* Media query for screens smaller than a certain width (e.g., mobile devices) */
+/* Hide the footer */
+/* @media screen and (max-width: 768px) {
+  footer {
+    display: none;
+  }
+} */
+
+.new_footer_area {
+  background: #fbfbfd;
+}
+
+.new_footer_top {
+  padding: 120px 0px 270px;
+  position: relative;
+  overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+  padding-top: 5px;
+  padding-bottom: 50px;
+}
+.footer_bottom {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #7f88a6;
+  padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #6a7695;
+  margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+  border-width: 1px;
+  margin-top: 20px;
+}
+.btn_get_two:hover {
+  background: transparent;
+  color: #5e2ced;
+}
+.btn_get:hover {
+  color: #fff;
+  background: #6754e2;
+  border-color: #6754e2;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+  color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+  margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+  margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+  margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+  margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+  width: 44px;
+  height: 44px;
+  line-height: 43px;
+  background: transparent;
+  border: 1px solid #e2e2eb;
+  font-size: 24px;
+}
+.f_social_icon a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 45px;
+  color: #858da8;
+  display: inline-block;
+  background: #ebeef5;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.ti-facebook:before {
+  content: "\e741";
+}
+.ti-twitter-alt:before {
+  content: "\e74b";
+}
+.ti-vimeo-alt:before {
+  content: "\e74a";
+}
+.ti-pinterest:before {
+  content: "\e731";
+}
+
+.btn_get_two {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #5e2ced;
+  border-color: #5e2ced;
+  color: #fff;
+}
+
+.btn_get_two:hover {
+  background: transparent;
+  color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+  background: #5e2ced;
+  border-color: #5e2ced;
+  color: white;
+}
+.new_footer_top .f_social_icon a + a {
+  margin-left: 4px;
+}
+.new_footer_top .f-title {
+  margin-bottom: 30px;
+  color: #263b5e;
+}
+.f_600 {
+  font-weight: 600;
+}
+.f_size_18 {
+  font-size: 18px;
+}
+
+.new_footer_top .f_widget.about-widget .f_list li a {
+  color: #6a7695;
+}
+
+.new_footer_top .footer_bg {
+  position: absolute;
+  bottom: 0;
+  background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png")
+    no-repeat scroll center 0;
+  width: 100%;
+  height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+  background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif")
+    no-repeat center center;
+  width: 330px;
+  height: 105px;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  -webkit-animation: myfirst 22s linear infinite;
+  animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+  background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif")
+    no-repeat center center;
+  width: 88px;
+  height: 100px;
+  background-size: 100%;
+  bottom: 0;
+  left: 38%;
+  position: absolute;
+  -webkit-animation: myfirst 30s linear infinite;
+  animation: myfirst 30s linear infinite;
+}
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/*************footer End*****************/
