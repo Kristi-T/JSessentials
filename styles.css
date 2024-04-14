@@ -543,7 +543,17 @@ cite {
 .controls {
   padding-bottom: 12px;
 }
+
 /* Footer */
+
+/* Media query for screens smaller than a certain width (e.g., mobile devices) */
+/* Hide the footer */
+/* @media screen and (max-width: 768px) {
+  footer {
+    display: none;
+  }
+} */
+
 .new_footer_area {
   background: #fbfbfd;
 }
@@ -585,15 +595,6 @@ cite {
   border-color: #6754e2;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-a:hover,
-a:focus,
-.btn:hover,
-.btn:focus,
-button:hover,
-button:focus {
-  text-decoration: none;
-  outline: none;
 }
 
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
@@ -677,14 +678,7 @@ button:focus {
 .f_size_18 {
   font-size: 18px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #4b505e;
-}
+
 .new_footer_top .f_widget.about-widget .f_list li a {
   color: #6a7695;
 }
